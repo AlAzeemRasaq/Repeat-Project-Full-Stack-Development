@@ -1,0 +1,1273 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+/* ------------------------------ Account.css ---------------------------------*/
+
+.ar_accountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 30%;
+    background-color: #d9dddc;
+}
+
+.ar_accountH1 {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;  
+}
+  
+.ar_accountProfilePic {
+    margin-top: 20px;
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* ------------------------------ AllProducts.css ---------------------------------*/
+  
+  .ar_headingContainer {
+    padding-top: 20px;
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .ar_headingH1 {
+    font-size: 60px;
+    font-weight: 100;
+  }
+  
+  .ar_collectionContainer {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+  }
+  
+  .ar_productBoxContainer {
+    width: 25%;
+    object-fit: cover; /* Scales the image as large as possible while preserving its aspect ratio */
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .ar_toolButtonsContainer {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+  }
+  
+  @media only screen and (max-width: 499px) {
+    .ar_addProductContainer {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      align-items: center;
+      width: 100%;
+    }
+    .ar_blueButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+    }
+    .ar_collectionContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    .ar_productBoxContainer {
+      width: 60%;
+      object-fit: cover; /* Scales the image as large as possible while preserving its aspect ratio */
+      display: flex;
+      justify-content: space-evenly;
+      transition: 0.4s;
+    }
+  }
+  
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    .ar_addProductContainer {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      align-items: center;
+      width: 100%;
+    }
+    .ar_blueButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+    }
+    .ar_collectionContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    .ar_productBoxContainer {
+      width: 40%;
+      object-fit: cover; /* Scales the image as large as possible while preserving its aspect ratio */
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+  
+
+/* ------------------------------ Cart.css ---------------------------------*/
+
+.ar_cartContainer {
+    margin-top: 100px;
+    display: flex;
+    width: 350px;
+    height: auto;
+    background-color: white;
+    flex-direction: column;
+    color: black;
+    border: 1px solid black;
+  }
+  
+  .ar_cartH2 {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    padding: 10px;
+  }
+  
+  .ar_cartItemContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: grey;
+    width: 20%;
+  }
+  
+  .ar_cartProductInfoContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .ar_cartMainImage0 {
+    border-radius: 15%;
+    padding-top: 10px;
+    height: 100px !important;
+    width: 100px !important;
+  }
+  
+  .ar_cartMainImage1 {
+    display: none;
+  }
+  
+  .ar_quantityContainer {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-evenly;
+    background-color: white;
+    border: 1px solid grey;
+    height: 25px;
+    width: 50px;
+  }
+  
+  .ar_itemQuantityText {
+    padding-top: 1px;
+    font-size: 15px;
+  }
+  
+  .ar_quantityBtn {
+    padding: 4px;
+    background-color: white;
+    border: none;
+    color: black;
+  }
+  
+  .ar_quantityBtn:hover {
+    background-color: grey;
+  }
+  
+  .ar_subtotalContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+  }
+  
+  .ar_subtotalText {
+    font-size: 20px;
+    color: black;
+  }
+  
+  .ar_subtotalNum {
+    font-size: 20px;
+    color: red;
+  }
+  
+  @media only screen and (max-width: 499px) {
+    .ar_cartContainer {
+      margin-top: 50px;
+      display: flex;
+      width: 80%;
+      height: auto;
+      background-color: white;
+      flex-direction: column;
+      color: black;
+      border: 1px solid black;
+    }
+  }
+  
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    .ar_cartContainer {
+      margin-top: 50px;
+      display: flex;
+      width: 60%;
+      height: auto;
+      background-color: white;
+      flex-direction: column;
+      color: black;
+      border: 1px solid black;
+    }
+  }
+
+/* ------------------------------ Footer.css ---------------------------------*/
+
+.ar_footer {
+    padding-top: 20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2bb2b;
+    width: 100%;
+  }
+
+/* ------------------------------ Form.css ---------------------------------*/ /* For AddProduct, EditProduct, Login and Register */
+
+.ar_formContainer {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  align-items: center;
+  margin: 200px;
+  width: 30%;
+  background-color: #d9dddc;
+}
+
+.ar_createAccountButton {
+  text-decoration: none;
+  color: red;
+}
+
+.ar_confirmationButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: 50px;
+}
+
+.ar_registerConfirmationButtonsContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: 50px;
+}
+
+.ar_loginH2 {
+  margin-top: 20px;
+}
+
+.ar_registerH2 {
+  margin-top: 20px;
+}
+
+.ar_loginH4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ar_registerH4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ar_productFormH2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ar_loginInput {
+  font-size: 13px;
+  border-radius: 6px 6px 6px 6px;
+  border: 1px solid white;
+  width: 50%;
+  height: 30px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.ar_registerInput {
+  font-size: 13px;
+  border-radius: 6px 6px 6px 6px;
+  border: 1px solid white;
+  width: 50%;
+  height: 30px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.ar_productFormInput {
+  font-size: 13px;
+  border-radius: 6px 6px 6px 6px;
+  border: 1px solid white;
+  width: 50%;
+  height: 30px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.ar_editFormInput {
+  font-size: 13px;
+  border-radius: 6px 6px 6px 6px;
+  border: 1px solid white;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.ar_formLoginButton {
+  background-color: #00B000;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ar_formRegisterButton {
+  background-color: #00d000;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ar_formCancelButton {
+  background-color: #b00000;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ar_formRegisterCancelButton {
+  background-color: #b00000;
+  width: auto;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ar_addCancelContainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ar_addButton {
+  background-color: #00b600;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ar_cancelButton {
+  background-color: #b00000;
+  width: 140px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ar_photoUploadContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+}
+
+/* Found out how to style a input with type "file" here:  https://www.viget.com/articles/styling-native-file-upload-input-field/ */
+
+.ar_fileInput {
+  border: none;
+}
+
+input[type="file"] {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+input::ar_fileSelectorBbutton {
+  border: none;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5em;
+  transition-duration: 0.8s;
+  border-radius: 3px;
+}
+
+.ar_fileLabel {
+  background-color: #007bff;
+  color: #fff;
+  height: 20px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ar_inputLabelContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.ar_editLabel {
+  color: black;
+  font-size: 15px;
+  width: 40%;
+}
+
+@media only screen and (max-width: 499px) {
+  .ar_formContainer {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    align-items: center;
+    margin: 200px;
+    width: 80%;
+    background-color: #d9dddc;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 999px) {
+  .ar_formContainer {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    align-items: center;
+    margin: 200px;
+    width: 60%;
+    background-color: #d9dddc;
+  }
+}
+
+/* ------------------------------ Home.css ---------------------------------*/
+
+.ar_homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .ar_homeH1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+  }
+  
+  .ar_homeImg {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .ar_imageContainer {
+    min-height: 100%;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background-color: red;
+  }
+  
+  @media only screen and (max-width: 499px) {
+    .ar_homeH1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+    }
+  
+    .ar_homeImg {
+      border: 0;
+      width: auto;
+      height: 400px;
+      vertical-align: top;
+    }
+  }
+  
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    .ar_homeImg {
+      border: 0;
+      width: auto;
+      height: 600px;
+      vertical-align: top;
+    }
+  }  
+
+/* ------------------------------ Nav.css ---------------------------------*/
+
+.ar_navContainer {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f2bb2b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .ar_brandNameP {
+    color: white;
+    padding-left: 14px;
+    font-size: 30px;
+  }
+  
+  .ar_brandButton {
+    color: white;
+    padding-left: 14px;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  .ar_linkContainer {
+    padding-top: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  
+  .ar_loginContainer {
+    font-size: 30px;
+    background-color: #f2bb2b;
+    padding-right: 20px;
+  }
+  
+  .ar_button {
+    background-color: #f2bb2b;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .ar_navAtcButton {
+    background-color: #f2bb2b;
+    padding-left: 10px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  
+  .ar_loginButton {
+    background-color: #f2bb2b;
+    padding-right: 10px;
+    color: white;
+    border-radius: 2px;
+    text-decoration: none;
+  }
+  
+  .ar_registerButton {
+    background-color: #f2bb2b;
+    color: white;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .ar_rightSideNavContainer {
+    display: flex;
+    padding-right: 20px;
+    background-color: #f2bb2b;
+    padding-top: 8px;
+    font-size: 22px;
+    flex-direction: row;
+    z-index: 999;
+  }
+  
+  .ar_profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    opacity: 1;
+  }
+  
+  .ar_logoutContainer {
+    background-color: #f2bb2b;
+    width: 10%;
+    padding-top: 5px;
+    font-size: 16px;
+    flex-direction: column;
+    z-index: 999;
+    position: absolute;
+    top: 47px;
+    right: 0;
+    display: none;
+  }
+  
+  .ar_logoutButton {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .ar_logoutText {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  @media only screen and (max-width: 499px) {
+    .ar_navContainer {
+      margin: 0px;
+      padding: 0px;
+      background-color: #f2bb2b;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 60px;
+      width: 100%;
+    }
+  
+    .ar_brandNameP {
+      padding-top: 10px;
+      color: white;
+      padding-left: 14px;
+      font-size: 10px;
+    }
+  
+    .ar_brandButton {
+      color: white;
+      padding-left: 14px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  
+    .ar_linkContainer {
+      padding-top: 15px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+    }
+  
+    .ar_navAtcButton {
+      background-color: #f2bb2b;
+      padding-left: 0px;
+      padding-right: 10px;
+      text-decoration: none;
+      color: white;
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+  
+    .ar_loginContainer {
+      padding-top: 15px;
+      font-size: 20px;
+      background-color: #f2bb2b;
+      padding-right: 20px;
+    }
+  
+    .ar_profilePic {
+      width: 15px;
+      height: 30px;
+      border-radius: 10px;
+    }
+  
+    .ar_logoutContainer {
+      padding-top: 15px;
+      font-size: 15px;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .ar_logoutButton {
+      color: white;
+      padding-right: 10px;
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+    }
+  
+    .ar_rightSideNavContainer {
+      padding-right: 20px;
+      background-color: #f2bb2b;
+      padding-top: 8px;
+      font-size: 22px;
+      flex-direction: row;
+      z-index: 999;
+    }
+  
+    .ar_profilePic {
+      width: 40px;
+      height: 40px;
+      border-radius: 15px;
+      opacity: 1;
+      position: relative;
+    }
+  
+    .ar_logoutContainer {
+      background-color: #f2bb2b;
+      width: 20%;
+      padding-top: 5px;
+      font-size: 16px;
+      flex-direction: column;
+      z-index: 999;
+      position: absolute;
+      top: 47px;
+      right: 0;
+      display: none;
+    }
+  
+    .ar_logoutButton {
+      color: white;
+      cursor: pointer;
+    }
+  
+    .ar_logoutText {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    .ar_navContainer {
+      margin: 0px;
+      padding: 0px;
+      background-color: #f2bb2b;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 60px;
+      width: 100%;
+    }
+  
+    .ar_brandNameP {
+      padding-top: 10px;
+      color: white;
+      padding-left: 14px;
+      font-size: 10px;
+    }
+  
+    .ar_brandButton {
+      color: white;
+      padding-left: 14px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  
+    .ar_linkContainer {
+      padding-top: 15px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+    }
+  
+    .ar_navAtcButton {
+      background-color: #f2bb2b;
+      padding-left: 0px;
+      padding-right: 10px;
+      text-decoration: none;
+      color: white;
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+  
+    .ar_loginContainer {
+      padding-top: 15px;
+      font-size: 20px;
+      background-color: #f2bb2b;
+      padding-right: 20px;
+    }
+  
+    .ar_profilePic {
+      width: 15px;
+      height: 30px;
+      border-radius: 10px;
+    }
+  
+    .ar_logoutContainer {
+      padding-top: 15px;
+      font-size: 15px;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .ar_logoutButton {
+      color: white;
+      padding-right: 10px;
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+    }
+  
+    .ar_rightSideNavContainer {
+      padding-right: 20px;
+      background-color: #f2bb2b;
+      padding-top: 8px;
+      font-size: 22px;
+      flex-direction: row;
+      z-index: 999;
+    }
+  
+    .ar_profilePic {
+      width: 40px;
+      height: 40px;
+      border-radius: 15px;
+      opacity: 1;
+      position: relative;
+    }
+  
+    .ar_logoutContainer {
+      background-color: #f2bb2b;
+      width: 20%;
+      padding-top: 5px;
+      font-size: 16px;
+      flex-direction: column;
+      z-index: 999;
+      position: absolute;
+      top: 47px;
+      right: 0;
+      display: none;
+    }
+  
+    .ar_logoutButton {
+      color: white;
+      cursor: pointer;
+    }
+  
+    .ar_logoutText {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 10px;
+    }
+  }
+
+/* ------------------------------ PayPalMessage.css ---------------------------------*/
+
+.ar_payPalMessage {
+    margin-top: 200px;
+    border: 1px solid black;
+    display: block;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+  }
+  
+  .ar_paypalH3Green {
+    padding-left: 5px;
+    background-color: #007000;
+  }
+  
+  .ar_paypalH3Red {
+    padding-left: 5px;
+    background-color: red;
+    color: white;
+  }
+  
+  .ar_paypalP {
+    padding-left: 5px;
+    padding-top: 5px;
+    color: black;
+  }
+  
+  .ar_paypalContinueButton {
+    padding-left: 5px;
+    padding-top: 20px;
+  }
+  
+  .ar_paypalGreenButton {
+    color: black;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: #007000;
+  }
+  
+  .ar_paypalRedButton {
+    color: white;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 100px;
+    background-color: red;
+  }
+
+/* ------------------------------ ProductBox.css ---------------------------------*/
+
+.ar_boxContainer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    justify-content: space-between;
+  }
+  
+  .ar_infoButtonContainer {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .ar_boxInfoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .ar_productNameP {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .ar_boxButtonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .ar_delButton {
+    background-color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 5px;
+  }
+  
+  .ar_editButton {
+    background-color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 0px;
+    padding: 5px;
+  }
+  
+  .ar_atcButton {
+    color: white;
+    margin: 0px;
+    margin-top: 3px;
+    height: 40px;
+    background-color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .ar_linkAtcButton {
+    color: white;
+    margin: 0px;
+    margin-top: 3px;
+    height: 40px;
+    background-color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .ar_ratingContainer {
+    font-size: 20px;
+    color: red;
+  }
+  
+  .ar_image0 {
+    border-radius: 20px;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .ar_image1 {
+    display: none;
+  }
+  
+  .ar_outOfStockP {
+    border-radius: 10px;
+    padding: 8px;
+    background-color: black;
+    color: white;
+  }
+
+/* ------------------------------ ProductPage.css ---------------------------------*/
+
+.ar_contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    margin-top: 100px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  
+  .ar_leftContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 50%;
+  }
+  
+  .ar_rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    padding-left: 30px;
+  }
+  
+  .ar_descriptionContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ar_content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #ffffff;
+  }
+  
+  .ar_discountH3 {
+    text-decoration: line-through;
+  }
+  
+  .ar_priceH3 {
+    color: red;
+  }
+  
+  .ar_quantity {
+    width: 15%;
+  }
+  
+  .ar_mainImage0 {
+    width: 400px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ar_mainImage1 {
+    display: none;
+  }
+  
+  .ar_ratingContainer {
+    font-size: 20px;
+    color: red;
+  }
+  
+  .ar_buyingButtons {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .ar_productPageAtcButton {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: red;
+    height: 40px;
+    border: none;
+    color: white;
+  }
+  
+  .ar_paypalBuyButton {
+    padding-top: 5px;
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 499px) {
+    .ar_contentContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 60%;
+      margin-top: 100px;
+      justify-content: space-between;
+    }
+  
+    .ar_leftContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      width: 50%;
+    }
+  
+    .ar_rightContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      width: 50%;
+      padding-left: 30px;
+      font-size: 12px;
+    }
+  
+    .ar_descriptionContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .ar_content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #ffffff;
+    }
+  
+    .ar_discountH3 {
+      text-decoration: line-through;
+    }
+  
+    .ar_priceH3 {
+      color: red;
+    }
+  
+    .ar_quantity {
+      width: 15%;
+    }
+  
+    .ar_mainImage0 {
+      width: 175px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .ar_mainImage1 {
+      display: none;
+    }
+  
+    .ar_buyingButtons {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .ar_productPageAtcButton {
+      width: 100%;
+      border-radius: 5px;
+      font-size: 15px;
+      background-color: red;
+      height: 40px;
+      border: none;
+      color: white;
+    }
+  
+    .ar_paypalBuyButton {
+      padding-top: 5px;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    .ar_mainImage0 {
+      width: 275px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .ar_rightContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      width: 50%;
+      padding-left: 30px;
+      font-size: 15px;
+    }
+  }
