@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<script src="maps.js" type="text/javascript"></script>
+<link href="css/sitestyle.css" rel="stylesheet" type="text/css"/>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- this guy right here keeps the page responsive for multiple devices! -->
+        <title>Google Maps CA</title>
+
+        <!-- app icon -->
+        <link rel="icon" type="image/png" href="appicons/paris 2024 logo.jpg">
+
+        <!-- ios support, derek.comp.dkit.ie -->        
+        <link rel="icon" href="appicons/paris 2024 logo.jpg" type="image/png">
+        <link rel="apple-touch-icon" href="appicons/paris 2024 logo.jpg">   
+        <meta name="msapplication-TileImage" content="icons/icon_large_blue.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="theme-color" content="white">  
+        <meta name="apple-mobile-web-app-capable" content="yes">  
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+        <meta name="apple-mobile-web-app-title" content="Offline First Example">
+
+    </head>
+    <body onload="getCurrencies()">
+        <div class="mainpic">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/2024_Summer_Olympics_logo.svg/1200px-2024_Summer_Olympics_logo.svg.png" />
+            <a href="https://olympics.com/en/paris-2024" target="_blank">Official Site</a>
+            <a href="https://bdsmovement.net/banisrael" target="_blank">BDS</a>
+            <a href="https://www.youtube.com/watch?v=Z1HT0E1-RFQ" target="_blank">Trailer?</a>
+            <h1>PARIS 2024 PROJECT</h1>
+            <p>An individual DkIT project by Al-Azeem</p>
+        </div>
+
+        <marquee direction="left" behavior="scroll" scrollamount="15">
+            Catch all the excitement from 26 July to 11 August 2024!
+        </marquee>
+
+        <div class="headerbar">
+            <h1>Paris 2024 Summer Olympic Custom Map</h1>
+        </div>
+
+        <!-- Filters -->
+        <div class="filternav">
+            <label for=cafe>Cafes</label><input name=placeType id=cafe type=radio value=cafe onclick=placeType="cafe";displayMap() checked>
+            <label for=cafe>Restaurants</label><input name=placeType id=restaurant type=radio value=restaurant onclick=placeType="restaurant";displayMap()>
+            <label for=cafe>Museums</label><input name=placeType id=museum type=radio value=museum onclick=placeType="museum";displayMap()>
+            <label for=cafe>Hotels</label><input name=placeType id=hotel type=radio value=hotel onclick=placeType="hotel";displayMap()>
+        </div>
+
+        <!-- Map -->
+        <div id=map></div>    
+        <leftside>
+            <div class="card">
+                <!-- Google Translate -->
+                <div id="google_translate_element"></div>
+                
+                <!-- Control Panel -->
+                <div id="control-panel">
+                    <!-- start and end -->
+                    <input id=start type=text placeholder="Starting point">
+                    <input id=end type=text placeholder="Destination">
+                    <input id=waypoint type=text placeholder="Waypoint...">
+
+                    <input type=button onclick=calculateRoute() id=submit value=Submit>
+                </div>
+                
+                <div class="transport-options">
+                    <button><i class=material-icons onclick=calculateRoute("DRIVING")>Driving</i></button>
+                    <button><i class=material-icons onclick=calculateRoute("TRANSIT")>Transit</i></button>
+                    <button><i class=material-icons onclick=calculateRoute("BICYCLING")>Cycling</i></button> <!-- for some reason, this only works when spelled 'bicycling' instead of 'cycling'... -->
+                    <button><i class=material-icons onclick=calculateRoute("WALKING")>Walking</i></button>
+                </div>
+                
+                <h1 id=transport-mode>Driving</h1>
+                
+                <!-- Direction Hamburger Menu (not actually a hamburger menu, but a minimiser) -->
+                <details id=directions><summary>Directions</summary></details>
+            </div>
+        </leftside>
+
+        <rightside>
+            <div class="card">
+                <!-- Currency Conversion -->
+                <div class="currency">
+                    <h2>Currency Conversion</h2>
+
+                    <span>From</span>   <select class="currencies" id="initialCurrency"></select>
+                    <span>to</span>     <select class="currencies" id="targetCurrency"></select><br>
+
+                    <input type="text" placeholder="Enter amount..." id="initialValue" class="currencyVal"/>
+                    <button onclick="calculateExchange()">Calculate</button>
+                    <h2 type="text" id="targetValue" class="currencyVal"></h2>
+                </div>
+            </div>
+        </rightside>
+        
+        <div class="footer">
+            <p>@ 2024, Paris 2024 Olympic Games, Olympics, DkIT.</p>
+        </div>
+
+        <!-- Google Maps -->
+        <script src=https://maps.googleapis.com/maps/api/js?key=AIzaSyA7t2cRC1VnrMEJq59mYMSyjwdmMejdoOE&loading=async&callback=loadMap&libraries=marker,places></script>       
+        
+        <!-- Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en'},
+                    'google_translate_element'
+                )
+            }
+        </script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>

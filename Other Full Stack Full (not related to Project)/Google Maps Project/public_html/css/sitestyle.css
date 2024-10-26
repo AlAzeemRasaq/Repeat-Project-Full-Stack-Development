@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.mainpic {
+  background-image: url("https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_xl_2x/f_auto/primary/vc4ucoz6rs96naqnk3jb");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 80%;
+}
+
+.mainpic img {
+  width: 100px;
+  height: 110px;
+  padding: 50px;
+}
+
+.mainpic a {
+  background-color: #36f4cb;
+  color: white;
+  float: right;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  margin-top: 100px;
+  margin-right: 10px;
+}
+
+.mainpic h1, .mainpic p {
+  color: white;
+  margin-top: 15%;
+  left: 100px;
+  margin-left: 50px;
+}
+
+.mainpic h1 {
+  font-size: 100px;
+}
+
+.mainpic p {
+  margin-top: 0;
+  font-size: 50px;
+}
+
+/* Responsive layout for smaller screens, w3schools */
+@media (max-width: 477px) {
+  .mainpic a, .mainpic img {
+    margin: auto;
+    display: block;
+  }
+}
+@media (max-width: 566px) {
+  .mainpic h1 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 350%;
+  }
+  .mainpic p {
+    margin-left: 0;
+    text-align: center;
+    font-size: 150%;
+  }
+}
+@media (max-width: 564px) {
+  .mainpic a {
+    margin: auto;
+    display: block;
+    width: 33.3%;
+    padding: 14px 0;
+  }
+}
+marquee {
+  width: 100%;
+  background-color: #0084ff;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.headerbar {
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+  background-color: #00284e;
+}
+
+.headerbar h1 {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  overflow: auto;
+}
+
+#map {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 600px;
+  border: thin solid #ccc;
+}
+
+.filternav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.filternav label {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: #dddddd;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.card button {
+  background-color: #baeeff;
+  padding: 14px;
+}
+
+#stadium-content {
+  width: 400px;
+  height: 200px;
+}
+
+#stadium-content img {
+  clear: both;
+  float: left;
+  width: 150px;
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 0px;
+  border: thin solid #CCC;
+}
+
+leftside {
+  float: left;
+  width: 50%;
+}
+
+#google_translate_element {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: 1px solid #000;
+}
+
+rightside {
+  float: left;
+  width: 50%;
+}
+
+/* Responsive layout - columns stack on top of each other for small screens, w3schools */
+@media (max-width: 800px) {
+  leftside, rightside {
+    width: 100%;
+    height: auto;
+  }
+}
+#directions {
+  background-color: #c3fdff;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.transport-options {
+  margin-top: 5px;
+}
+
+.currency {
+  border-radius: 5px;
+  background-color: #dddddd;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.currency select {
+  background-color: #72c484;
+  width: 200px;
+  height: 30px;
+  font-size: 17px;
+}
+
+.currency button {
+  background-color: #baeeff;
+  padding: 14px;
+}
+
+input[type=button] {
+  background-color: #baeeff;
+  padding: 14px;
+}
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 3px;
+  font-size: 17px;
+  border: 1px solid #000;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-200px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: #fff;
+  overflow: auto;
+  background-color: navy;
+  font-weight: bold;
+}

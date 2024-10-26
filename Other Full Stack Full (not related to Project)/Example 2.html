@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course notes example code</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href=https://fonts.googleapis.com/icon?family=Material+Icons rel=stylesheet>  
+
+        <style>
+            #map 
+            {
+                width:100%;
+                height:600px;
+                border:thin solid #CCC;
+            }
+
+            #control-panel
+            {
+                background-color: #fff;
+                margin-bottom:50px;
+            }
+            
+            .select-location-label
+            {
+                font-weight:bold;
+                min-width:40px;
+                display:inline-block;
+            }     
+            
+            #directions
+            {
+                width:100%;
+                margin:0px;
+                margin-top:20px;
+                margin-bottom:50px;
+            }
+        </style>
+
+        <script>
+            let directionsRenderer = null
+        
+            function loadMap()
+            {
+                let map = new google.maps.Map(document.getElementById("map"), {
+                    mapId: "MY_MAP_ID",
+					zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControlOptions: {
+                        mapTypeIds: ["roadmap", "hide_poi"]
+                    }
+                })
+
+                hidePointsOfInterest(map)
+
+                directionsRenderer = new google.maps.DirectionsRenderer()
+                directionsRenderer.setMap(map)
+
+                directionsRenderer.setPanel(document.getElementById("directions"))        
+        
+                calculateRoute("DRIVING")
+            }
+
+
+            function calculateRoute(travelMode = "DRIVING")
+            {
+                document.getElementById("transport-mode").innerHTML = travelMode
+                let start = document.getElementById("start").value
+                let end = document.getElementById("end").value
+
+                let request = {origin: start,
+                    destination: end,
+                    travelMode: travelMode}
+
+                directionsService = new google.maps.DirectionsService()
+                directionsService.route(request, (route, status) =>
+                {
+                    if (status === google.maps.DirectionsStatus.OK)
+                    {
+                        directionsRenderer.setDirections(route)
+                    }
+                })
+            }
+
+            function hidePointsOfInterest(map)
+            {
+                let styles = [
+                    {
+                        "featureType": "poi",
+                        "stylers": [{"visibility": "off"}]
+                    }
+                ]
+
+                let styledMapType = new google.maps.StyledMapType(styles, {name: "POI Hidden", alt: "Hide Points of Interest"})
+                map.mapTypes.set("hide_poi", styledMapType)
+                
+                map.setMapTypeId("hide_poi")
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id=control-panel>
+            <span class=select-location-label>Start:</span>
+            <select id=start onChange=calculateRoute()>
+                <option value="Dundalk Institute of Technology Louth Ireland">DkIT</option>
+                <option value="Dublin City University Collins Avenue Extension Whitehall Dublin 9">DCU</option>
+                <option value="Maynooth University Ireland">Maynooth</option>
+                <option value="Queens University Belfast">Queens</option>                 
+            </select>
+
+            <br>
+            <span class=select-location-label>End:</span>
+            <select id=end onChange=calculateRoute()>
+                <option value="Dundalk Institute of Technology Louth Ireland">DkIT</option>
+                <option value="Dublin City University Collins Avenue Extension Whitehall Dublin 9" selected>DCU</option>
+                <option value="Maynooth University Ireland">Maynooth</option>
+                <option value="Queens University Belfast">Queens</option>                 
+            </select>
+        </div>
+
+        <div>
+            <button><i class=material-icons onclick=calculateRoute("DRIVING")>directions_car</i></button>
+            <button><i class=material-icons onclick=calculateRoute("TRANSIT")>directions_bus</i></button>
+            <button><i class=material-icons onclick=calculateRoute("BICYCLING")>directions_bike</i></button>
+            <button><i class=material-icons onclick=calculateRoute("WALKING")>directions_walk</i></button>
+        </div>
+            
+        <h1 id=transport-mode>Driving</h1>
+        
+        <div id=directions></div>
+        
+        <div id=map></div>    
+
+        <!-- Google Maps -->
+        <script src=https://maps.googleapis.com/maps/api/js?key=AIzaSyA7t2cRC1VnrMEJq59mYMSyjwdmMejdoOE&loading=async&callback=loadMap&libraries=marker></script>         		
+    </body>
+</html>

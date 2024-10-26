@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>English dictionary API example</title>
+
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="Content-Language" content="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body
+            {
+                width:1000px;
+                border:thin solid #aaaaaa;
+                padding: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 5px;
+                background: #f7f7f7;
+            }
+
+            input[type=text]
+            {
+                width:100%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            #meaningContainer
+            {
+                margin-top:50px;
+                display:none;
+            }
+
+            .partOfSpeech,
+            .example
+            {
+
+                display:inline-block;
+                min-width: 100px;
+                text-transform: capitalize;
+            }
+
+            .partOfSpeech
+            {
+                font-weight: bold;
+            }
+
+            .example
+            {
+                font-style: italic;
+            }
+
+            h2
+            {
+                margin-bottom: 5px;
+            }
+        </style>
+
+        <script>         
+            function getMeaning()
+            {
+                const word = encodeURI(document.getElementById('word').value)
+                const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+
+                fetch(url)
+                        .then(response => response.json())
+                        .then(jsonData => {
+                            let meanings = jsonData[0].meanings
+
+                            let htmlString = ``
+                            meanings.forEach(meaning => {
+                                htmlString += `<label class="partOfSpeech">${meaning.partOfSpeech}:</label>`
+                                htmlString += `<label>${meaning.definitions[0].definition} </label><br>`
+
+                                meaning.definitions.forEach(definition => {
+                                    if (typeof definition.example !== 'undefined')
+                                    {
+                                        let test = definition.example.replaceAll(word, `<b><i>${word}</i></b>`)
+                                        htmlString += `<label class="example">Example:</label><label>${test}</label><br>`
+                                    }
+                                })
+
+                                htmlString += `<br>`
+                            })
+
+                            document.getElementById('meaningContainer').style.display = 'block'
+                            document.getElementById('meaning').innerHTML = htmlString
+                        })
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Text:</h2><input type="text" id="word" onkeyup="document.getElementById('meaningContainer').style.display = 'none'"/> 
+        <input type="button" value="Get meaning" onclick="getMeaning()"/>
+
+        <div id="meaningContainer">    
+            <h2>Meaning:</h2>
+            <div id="meaning"></div>
+        </div>
+    </body>
+</html>

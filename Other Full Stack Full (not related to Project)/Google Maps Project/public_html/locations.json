@@ -1,0 +1,164 @@
+{
+    "div": [
+      {
+        "@id": "stadium-content",
+        "h1": "Stade de France",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDyPQtZDMKgXxTfWRwgjZYKVK-U1RafPObReiJQ65PIg&s"
+          },
+          "p": [
+            "The Stade de France is the main area for the Paris 2024 Summer Olympics.",
+            "It is a track and field stadium that can fit up to 80,698 people, making it France's largest stadium.",
+            {
+              "a": {
+                "@href": "https://olympics.com/en/paris-2024/venues/stade-de-france",
+                "#text": "check out the venue here."
+              },
+              "#text": "For more information,"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "stadium-content",
+        "h1": "Saint-Quentin-en-Yvelines BMX Stadium",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w730/f_auto/primary/ioso0xkk0v6j8biry0av"
+          },
+          "p": [
+            "This is the Saint-Quentin-en-Yvelines BMX Stadium.",
+            "Let's see how fast you are at cycling.",
+            {
+              "a": {
+                "@href": "https://olympics.com/en/paris-2024/venues/saint-quentin-en-yvelines-bmx-stadium",
+                "#text": "check out the venue here."
+              },
+              "#text": "For more information,"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "stadium-content",
+        "h1": "La Defense Arena",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w730/f_auto/primary/v6t0hesg2db1d5gzqb3i"
+          },
+          "p": [
+            "This is the La Defense Arena.",
+            "Another multi-purpose arena in Paris.",
+            {
+              "a": {
+                "@href": "https://olympics.com/en/paris-2024/venues/paris-la-defense-arena",
+                "#text": "check out the venue here."
+              },
+              "#text": "For more information,"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "stadium-content",
+        "h1": "Parc des Princes",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w730/f_auto/primary/p3mkcxoekiq5qm86eukz"
+          },
+          "p": [
+            "This is the Parc des Princes.",
+            "A 2-tier football stadium for football and concerts.",
+            {
+              "a": {
+                "@href": "https://olympics.com/en/paris-2024/venues/parc-des-princes",
+                "#text": "check out the venue here."
+              },
+              "#text": "For more information,"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "stadium-content",
+        "h1": "Villepinte Exhibition Centre",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w730/f_auto/primary/ueupjchxueao6ta0a8jn"
+          },
+          "p": [
+            "This is the Villepinte Exhibition Centre.",
+            "Now nicknamed the \"North Paris Arena\" for the Olympics this year.",
+            {
+              "a": {
+                "@href": "https://olympics.com/en/paris-2024/venues/north-paris-arena",
+                "#text": "check out the venue here."
+              },
+              "#text": "For more information,"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "stadium-content",
+        "h1": "Eiffel Tower",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://lh5.googleusercontent.com/p/AF1QipPTxHG0_dJooayYKzCB004tccRM5MhxYp6KWa53=w408-h544-k-no"
+          },
+          "p": [
+            "THIS, everyone, is the pinnacle of Paris, and by extension, France.",
+            "One of the TWO landmarks that define what makes Paris beautiful.",
+            "No, you won't find Ladybug or Cat Noir here, trust me. :)"
+          ]
+        }
+      },
+      {
+        "@id": "stadium-content",
+        "h1": "Arc de Triomphe",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://lh5.googleusercontent.com/p/AF1QipMXST5GB5FJEaWKGQ2d_oBsOZhWLmXjYWhaK4M8=w408-h544-k-no"
+          },
+          "p": [
+            "The second most important landmark in Paris, and all of France.",
+            "It's another landmark that defines what makes Paris beautiful."
+          ]
+        }
+      },
+      {
+        "@id": "stadium-content",
+        "h1": "Charles de Gaulle Airport",
+        "div": {
+          "@id": "content",
+          "img": {
+            "@src": "https://www.besix.com/-/media/images/projects/charles-de-gaulle-airport---terminal/cdg-2e-139.jpg?mh=400&h=400&w=602&la=en&hash=13A9496319E533DAD6EC009FAB9F38FA"
+          },
+          "p": [
+            "The biggest and busiest airport in France.",
+            "Second busiest in Europe, and then there's London-Heathrow.",
+            "The airport is the hub for Air France, France's flag carrier airline."
+          ]
+        }
+      }
+    ],
+    "#text": [
+      "let stadiumContent = `",
+      "`\r\n\r\n let bmxContent = `",
+      "`\r\n\r\n let laDefense = `",
+      "`\r\n\r\n let parcDesPrinces = `",
+      "`\r\n\r\n let northParisArena = `",
+      "`\r\n\r\n let eiffelTower = `",
+      "`\r\n\r\n let arcDeTriomphe = `",
+      "`\r\n\r\n let parisCDG = `",
+      "`"
+    ]
+  }
